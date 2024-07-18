@@ -1,0 +1,14 @@
+{
+    "routes": [
+      {
+        "src": "/login",
+        "methods": ["OPTIONS", "POST"],
+        "headers": {
+          "Access-Control-Allow-Origin": "https://taskify-frontend-kappa.vercel.app",
+          "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Credentials": true
+        }
+      }
+    ]
+  }
