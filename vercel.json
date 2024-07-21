@@ -2,11 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js",  // Replace with your main server file name
+      "src": "app.js",  // Replace with your main server file name
       "use": "@vercel/node",
       "config": {
         "includeFiles": [
-          ".env" // Include your .env file for sensitive information
+          ".env" // Include your .env file for non-deployment sensitive data
         ]
       }
     }
@@ -14,7 +14,7 @@
   "routes": [
     {
       "src": "/(.*)", // Catch all routes and forward to your Express app
-      "dest": "index.js"  // Replace with your main server file name
+      "dest": "app.js"  // Replace with your main server file name
     }
   ]
 }
