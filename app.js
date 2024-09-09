@@ -11,7 +11,7 @@ const Secret = process.env.SECRET
 const mongoose = require("mongoose")
 
 app.use(cors({
-    origin: 'https://taskify-midsane-kappa.vercel.app', // Allow requests from this origin
+    origin: 'taskify-midsane.vercel.app', // Allow requests from this origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
     credentials: true // Allow cookies to be sent with requests
   }));
