@@ -33,6 +33,22 @@ app.get("/top-users", async(req, res)=> {
    
 })
 
+function getExactTime() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
+  const milliseconds = String(now.getMilliseconds()).padStart(3, "0");
+
+  return `${hours}:${minutes}:${seconds}.${milliseconds}`;
+}
+
+app.get("/ping", (req, res) => {
+  const time = getExactTime();
+  console.log(`got successfully pinged at ${time}`);
+  res.status(201).json({ msg: `got successfully pinged at ${time}` });
+});
+
 
 app.post("/signup", async(req, res)=> {
     const email = req.body.email
